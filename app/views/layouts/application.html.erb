@@ -2,13 +2,59 @@
 <html>
 <head>
   <title>PurdueMade</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", "data-turbolinks-track" => true, media: "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <!-- start: navbar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+            <span><i class="icon-reorder"></i></span>
+          </a>
+          <%= link_to raw("<span><i class=\"icon-stop\"></i></span>PurdueMade"), "root", class: "brand" %>
+          <div id="top-navigation" class="nav-collapse subnav-collapse collapse ">
+            <ul class="nav pull-right">
+              <li class="top-account visible-desktop">
+                <%= link_to "People", "people", id: "peopleButton", class: "top-sign-in" %>
+              </li>
+              <li class="top-account visible-desktop">
+                <%= link_to "Projects", "projects", id: "projectsButton", class: "top-sign-in" %>
+              </li>
+              <li class="top-account visible-desktop">
+                <%= link_to "News Feed", "feed", id: "feedButton", class: "top-sign-in" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!--end: navbar -->
+    <%= render "modal" %>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
+  <!-- start: footer -->
+  <footer>
+    <div class="post-footer">
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            <div class="copyright">Copyright &copy; 2013 PurdueMade. All rights reserved.</div>
+          </div>
+          <div class="span6">
+            <ul class="footer-links">
+              <li>
+                <%= link_to "Contact", "contact" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- end: footer -->
 </body>
 </html>
