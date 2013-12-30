@@ -1,6 +1,5 @@
 PurdueMade::Application.routes.draw do
-  get "main/home"
-  get "main/feed"
+  root 'main#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

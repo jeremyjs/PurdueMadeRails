@@ -15,24 +15,24 @@
           <a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
             <span><i class="icon-reorder"></i></span>
           </a>
-          <%= link_to raw("<span><i class=\"icon-stop\"></i></span>PurdueMade"), "root", class: "brand" %>
+          <a class="brand" href="/"> <span><i class="icon-stop"></i></span> PurdueMade </a>
           <div id="top-navigation" class="nav-collapse subnav-collapse collapse ">
             <ul class="nav pull-right">
               <li class="top-account visible-desktop">
-                <%= link_to "People", "people", id: "peopleButton", class: "top-sign-in" %>
+                <%= link_to 'People', 'people', id: 'peopleButton', class: 'top-sign-in' %>
               </li>
               <li class="top-account visible-desktop">
-                <%= link_to "Projects", "projects", id: "projectsButton", class: "top-sign-in" %>
+                <%= link_to 'Projects', 'projects', id: 'projectsButton', class: 'top-sign-in' %>
               </li>
               <li class="top-account visible-desktop">
-                <%= link_to "News Feed", "feed", id: "feedButton", class: "top-sign-in" %>
+                <%= link_to 'News Feed', 'feed', id: 'feedButton', class: 'top-sign-in' %>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div><!--end: navbar -->
-    <%= render "modal" %>
+    <%= render 'modal' %>
   </header>
 
   <%= yield %>
@@ -48,7 +48,7 @@
           <div class="span6">
             <ul class="footer-links">
               <li>
-                <%= link_to "Contact", "contact" %>
+                <%= link_to 'Contact', 'contact' %>
               </li>
             </ul>
           </div>

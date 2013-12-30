@@ -1,2 +1,19 @@
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 774knwz4aoj84b
+  onLoad: onLinkedInLoad
+  authorize: true
+</script>
+<!-- start: title -->
+<div class="page-title1">
+  <div class="section-wrapper">
+    <div class="container">
+      <h2>PurdueMade is <em>THE</em> community for entrepreneurs at Purdue</h2>
+      <h3>Join the community through LinkedIn</h3>
+      <div id="loginButton">
+        <script type="in/Login"></script>
+      </div>
+    </div>
+  </div>
+</div><!-- end: title -->
+<%= render 'projects' %>
+<%= render 'people' %>

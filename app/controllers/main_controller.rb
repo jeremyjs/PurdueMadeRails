@@ -1,4 +1,8 @@
 class MainController < ApplicationController
+  def index
+    :home
+  end
+
   def home
   end
 
