@@ -1,0 +1,43 @@
+<!-- start: title -->
+<div class="page-title">
+  <div class="section-wrapper">
+    <div class="container">
+      <h2>PEOPLE</h2>
+    </div>
+  </div>
+</div><!-- end: title -->
+<!-- start: portfolio -->
+<div class="section-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="row spacey">
+          <% @users.each do |user| %>
+            <div class="span3">
+              <div class="white-content">
+                <%= link_to project_path(user.id) do %>
+                  <div class="img-mask hover-mask">
+                    <%= image_tag( user.pictureUrl )%>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="back">
+                          <div class="flip-b">
+                            <span class="icon-back"><i class="icon-plus-sign"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="hover-fade"><i class="icon-plus-sign icon-3x"></i></span>          
+                  </div>
+                  <h5><%= user.firstName %> <%= user.lastName %><span class="white-title"><i class="icon-plus"></i></span></h5>
+                  <h5><%= user.major %> | <%= user.year %><span class="white-title"></span></h5>
+                  <p><%= user.bio %></p>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div><!-- end: portfolio-->
