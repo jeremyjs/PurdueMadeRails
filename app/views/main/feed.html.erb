@@ -1,2 +1,23 @@
-<h1>Main#feed</h1>
-<p>Find me in app/views/main/feed.html.erb</p>
+
+<div class="row">
+  <div class="span8 offset2">
+    <div id="feed">
+      <h2 class="pagination-centered"> Recent Activity </h2>
+      <ul class="media-list">
+        <% users_and_projects.each do |item| %>
+          <%= link_to(item_path(item, item.id), class: "pull-left") do %>
+            <li class="media">
+              <%= image_tag( item.pictureUrl, class: "media-object pull-left", width: "64px")%>
+              <div class="media-body">
+                <h4 class="media-heading"><%= item.name %> Was Recently Added to PurdueMade</h4>
+                <p>
+                  <%= item.description %>
+                </p>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
